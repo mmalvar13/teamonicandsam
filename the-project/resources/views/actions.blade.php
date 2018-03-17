@@ -2,6 +2,6 @@
 
 @section('content')
     @foreach($actions as $action)
-        <p>{{ $action->name }}</p>
+        <p>{{ $action->title }}</p>
     @endforeach
 @stop
