@@ -1,3 +1,6 @@
+<div class="preloader">
+    <img src="img/loader.gif" alt="Preloader image">
+</div>
 <nav class="navbar">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
