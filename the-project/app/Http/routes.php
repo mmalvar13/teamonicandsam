@@ -11,7 +11,7 @@
 |
 */
 
-use App\Organization;
+//use App\Organization;
 
 Route::get('/', function () {
     return view('welcome');
@@ -22,7 +22,27 @@ Route::get('organizations', function()
 	$organizations = \App\Organization::all();
 
 	return View::make('organizations')->with('organizations', $organizations);
-//return $orgs;
+});
+
+Route::get('categories', function()
+{
+    $categories = \App\Category::all();
+
+    return View::make('categories')->with('categories', $categories);
+});
+
+Route::get('actions', function()
+{
+    $actions = \App\Action::all();
+
+    return View::make('actions')->with('actions', $actions);
+});
+
+Route::get('types', function()
+{
+    $types = \App\Type::all();
+
+    return View::make('types')->with('types', $types);
 });
 
 Route::get('users', function()

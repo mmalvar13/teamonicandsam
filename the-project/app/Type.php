@@ -22,7 +22,7 @@ class Type extends Model
 //Get the action associated with this type
 	public function action()
 	{
-		return $this->hasOne('App\Action');
+		return $this->hasMany('App\Action');
 	}
 
 }

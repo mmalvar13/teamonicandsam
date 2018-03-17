@@ -26,7 +26,7 @@ class Category extends Model
 //Get the category associated with this action
 	public function action()
 	{
-		return $this->hasOne('App\Action');
+		return $this->hasMany('App\Action');
 	}
 
 }

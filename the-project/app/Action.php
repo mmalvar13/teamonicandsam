@@ -25,6 +25,8 @@ class Action extends Model
 		'type_id'
 	];
 
+    public $timestamps = false;
+
 
 
 //DEFINE RELATIONSHIPS
