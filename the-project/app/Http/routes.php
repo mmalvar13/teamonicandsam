@@ -19,7 +19,11 @@ Route::get('/', function () {
 
 Route::get('organizations', function()
 {
-	$organizations = \App\Organization::all();
+//	$organizations = \App\Organization::all();
+//
+//	return View::make('organizations')->with('organizations', $organizations);
+
+	$organizations = \App\Organization::find(1);
 
 	return View::make('organizations')->with('organizations', $organizations);
 });
