@@ -1,4 +1,5 @@
-@extends('layout')
+{{--@extends('layout')--}}
+@extends('layouts.master')
 
 @section('content')
     @foreach($actions as $action)
