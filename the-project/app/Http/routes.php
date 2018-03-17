@@ -11,11 +11,19 @@
 |
 */
 
+use App\Organization;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('organizations', function()
+{
+	$organizations = \App\Organization::all();
 
+	return View::make('organizations')->with('organizations', $organizations);
+//return $orgs;
+});
 
 Route::get('users', function()
 {
