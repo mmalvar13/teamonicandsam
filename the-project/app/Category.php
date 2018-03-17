@@ -23,7 +23,7 @@ class Category extends Model
 
 //DEFINE RELATIONSHIPS
 
-//Get the action associated with this organization
+//Get the category associated with this action
 	public function action()
 	{
 		return $this->hasOne('App\Action');

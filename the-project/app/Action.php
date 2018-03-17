@@ -29,7 +29,7 @@ class Action extends Model
 
 //DEFINE RELATIONSHIPS
 
-//Get the action associated with this organization
+//Get the organization, type, and category associated with this action
 	public function organization()
 	{
 		return $this->hasOne('App\Organization');

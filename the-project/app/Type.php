@@ -19,7 +19,7 @@ class Type extends Model
 
 //DEFINE RELATIONSHIPS
 
-//Get the action associated with this organization
+//Get the action associated with this type
 	public function action()
 	{
 		return $this->hasOne('App\Action');
