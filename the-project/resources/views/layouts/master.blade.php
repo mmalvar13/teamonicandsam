@@ -40,7 +40,6 @@
 @include('partials.nav');
 @include('partials.header')
 <div class="main-container" id="main-container">
-    {{--@include('partials.sidebar')--}}
     <section>
         <div class="cut cut-top"></div>
         <div class="container">
@@ -73,11 +72,30 @@
                             </div>
                         </div>
                     </div>
-
                 @endforeach
+            </div>
+            <h2>About Us</h2>
+            <br>
+                <h4>There are a multitude of factors that cause families and individuals to live below the poverty line in our community. Homelessness, addiction, incarceration, food scarcity, barriers to education, and unjust laws and policies just to name a few.</h4>
+                <h4>Instead of trying tackle the entire problem at once, ______ allows civic-minded individuals to take daily, weekly, and monthly action on the urgent issues that matter most to their community.</h4>
+        </div>
+    </section>
+
+
+    <section id="intro" class="section section-padded">
+        <div class="container">
+            <div class="row text-center title">
+                <h2>19.8% of the population fell below the poverty line in New Mexico in 2017.</h2>
+                <br>
+                <h3>Take action today by helping on the issues that matter most to you.</h3>
+                <br>
+                <h4>"Saving the world starts with helping your community" - Monica Alvarez</h4>
+                <br>
+                <br>
             </div>
         </div>
     </section>
+
     <section id="services" class="section section-padded">
         <div class="container">
             <div class="row text-center title">
@@ -115,6 +133,7 @@
         </div>
         <div class="cut cut-bottom"></div>
     </section>
+
     <section class="section section-padded blue-bg">
         <div class="container">
             <div class="row">
