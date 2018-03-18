@@ -87,7 +87,7 @@
                         <h4>There are a multitude of factors that cause families and individuals to live below the
                             poverty line in our community. Homelessness, addiction, incarceration, food scarcity,
                             barriers to education, and unjust laws and policies just to name a few.</h4>
-                        <h4>Instead of trying tackle the entire problem at once, ______ allows civic-minded individuals
+                        <h4>Instead of trying tackle the entire problem at once, How Can You Help? allows civic-minded individuals
                             to take daily, weekly, and monthly action on the urgent issues that matter most to their
                             community.</h4>
                 </div>
