@@ -189,6 +189,24 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 .icon-bar {
 	background: #bbb;
 }
+
+/**************************adding this for layout default****************** */
+.layout-default .purple-section{
+	background-color: rgba(28, 36, 65, 0.93);
+	color: white;
+}
+
+.layout-default .purple-section.resources{
+	padding: 7% 20%;
+
+}
+
+
+
+
+
+
+
 /* Buttons */
 
 .btn {
