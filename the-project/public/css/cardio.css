@@ -267,6 +267,10 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 	background: #bbb;
 }
 
+.btn.btn-green {
+	background: #19b051;
+}
+
 /* Blink Cursor */
 
 .blink {
@@ -1192,10 +1196,15 @@ footer .social-footer li:hover a {
 
 /*Styling for Actions Page*/
 .actions {
-	padding: 12px;
-	margin: 5px;
+	padding: 2%;
+	margin: 2%;
 }
 
-.green-bg {
+.actions-date {
+	font-weight: bolder;
+}
 
+.actions-purple-section {
+	background-color: rgba(28, 36, 65, 0.93);
+	padding: 7% 20%;
 }
