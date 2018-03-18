@@ -23,10 +23,6 @@ Route::get('/', function () {
     return view('layouts.master')->with('types', $types)->with('categories', $categories);
 });
 
-
-
-
-
 Route::get('organizations', function()
 {
 //	$organizations = \App\Organization::all();
@@ -80,6 +76,21 @@ Route::get('users', function()
 {
     return 'Users!';
 });
+
+//Route::get('actions/{action}/categories/{category}/types/{type}', function ($actions, $type_id, $cat_id) {
+//
+//	return View::make("type_id", $type_id) && where ("cat_id", $cat_id)->get();
+//});
+//
+//Route::get('actions/categories/{cat_id}/types/{type_id}', function ($type_id, $cat_id) {
+//
+//	$actions = \App\Action::all();
+//
+//	return View::make('actions')->with('actions', $actions);
+//
+//})->name('action');
+//
+//$url = route('action', ['cat_id'], ['type_id']);
 
 
 
