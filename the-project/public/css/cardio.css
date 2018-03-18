@@ -1250,3 +1250,7 @@ footer .social-footer li:hover a {
 .section-padded.blue-bg h2{
 	color: white;
 }
+
+.purple-section form input,textarea{
+	color: black !important;
+}

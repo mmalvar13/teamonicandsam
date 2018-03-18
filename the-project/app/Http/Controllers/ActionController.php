@@ -84,7 +84,7 @@ class ActionController extends Controller
 //        return $action;
 
 //        return redirect()->route('actions');
-        return redirect('organizations/1');
+        return redirect('organizations/6');
 
 //        $date = $request->input('date');
 //        $title = $request->input('title');

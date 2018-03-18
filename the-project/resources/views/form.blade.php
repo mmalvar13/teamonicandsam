@@ -22,7 +22,7 @@
  <div>{{Form::select('category_id', array('1' => 'Food', '2' => 'Education', '3' => 'Homelessness', '4' => 'Health', '5' => 'Event'))}}</div>
 <div>{{Form::label('type_id', 'Choose an Action Type')}}</div>
  <div>{{Form::select('type_id', array('1' => 'Policy', '2' => 'Volunteer', '3' => 'Donate'))}}</div>
- <div>{{Form::hidden('organization_id', '1')}}</div>
+ <div>{{Form::hidden('organization_id', '6')}}</div>
 
  {{Form::submit('Submit')}}
 
