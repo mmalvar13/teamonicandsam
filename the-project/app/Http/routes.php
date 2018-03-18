@@ -14,8 +14,18 @@
 //use App\Organization;
 
 Route::get('/', function () {
-    return view('welcome');
+
+
+    $types = \App\Type::all();
+    $categories = \App\Category::all();
+
+
+    return view('layouts.master')->with('types', $types)->with('categories', $categories);
 });
+
+
+
+
 
 Route::get('organizations', function()
 {
@@ -28,12 +38,22 @@ Route::get('organizations', function()
 	return View::make('organizations')->with('organizations', $organizations);
 });
 
-Route::get('categories', function()
+//Route::get('categories', function()
+//{
+//    $categories = \App\Category::all();
+//
+//    return View::make('categories')->with('categories', $categories);
+//});
+
+
+Route::get('categories/{id}', function($id)
 {
     $categories = \App\Category::all();
 
     return View::make('categories')->with('categories', $categories);
-});
+})->name('category');
+
+
 
 Route::get('actions', function()
 {
@@ -41,6 +61,13 @@ Route::get('actions', function()
 
     return View::make('actions')->with('actions', $actions);
 });
+
+Route::get('actions', function()
+{
+    $actions = \App\Action::all();
+
+    return View::make('actions')->with('actions', $actions);
+})->name('get_your_actions');
 
 Route::get('types', function()
 {

@@ -44,186 +44,28 @@
         <div class="cut cut-top"></div>
         <div class="container">
             <div class="row intro-tables">
-                <div class="col-md-4">
-                    <div class="intro-table intro-table-1 intro-table-hover">
-                        <h5 class="white heading">Today's Schedule</h5>
-                        <div class="bottom">
-                            <h4 class="white heading small-heading no-margin regular">Register Today</h4>
-                            <h4 class="white heading small-pt">20% Discount</h4>
-                            <a href="#" class="btn btn-white-fill expand">Register</a>
-                        </div>
+                @foreach($types as $type)
+                    <div class="col-md-4">
+                        <div class="intro-table intro-table-1 intro-table-hover">
+                            <h5 class="white heading">{{$type->name}}</h5>
+                            <div class="bottom">
+                                <h4 class="white heading small-heading no-margin regular">Register Today</h4>
+                                <h4 class="white heading small-pt">20% Discount</h4>
+                                <div class="appear-on-hover">
+                                    @foreach($categories as $category)
+                                        <div><button type="button" class="btn btn-info">{{$category->name}}</button></div>
 
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="intro-table intro-table-2 intro-table-hover">
-                        <h5 class="white heading hide-hover">Premium Membership</h5>
-                        <div class="bottom">
-                            <h4 class="white heading small-heading no-margin regular">Register Today</h4>
-                            <h4 class="white heading small-pt">20% Discount</h4>
-                            <a href="#" class="btn btn-white-fill expand">Register</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="intro-table intro-table-3 intro-table-hover">
-                        <h5 class="white heading">Happy Clients</h5>
-                        <div class="bottom">
-                            <h4 class="white heading small-heading no-margin regular">Register Today</h4>
-                            <h4 class="white heading small-pt">20% Discount</h4>
-                            <a href="#" class="btn btn-white-fill expand">Register</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="services" class="section section-padded">
-        <div class="container">
-            <div class="row text-center title">
-                <h2>Services</h2>
-                <h4 class="light muted">Achieve the best results with our wide variety of training options!</h4>
-            </div>
-            <div class="row services">
-                <div class="col-md-4">
-                    <div class="service">
-                        <div class="icon-holder">
-                            <img src="img/icons/heart-blue.png" alt="" class="icon">
-                        </div>
-                        <h4 class="heading">Cardio Training</h4>
-                        <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel
-                            suspendisse scelerisque a aenean hac montes.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service">
-                        <div class="icon-holder">
-                            <img src="img/icons/guru-blue.png" alt="" class="icon">
-                        </div>
-                        <h4 class="heading">Yoga Pilates</h4>
-                        <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel
-                            suspendisse scelerisque a aenean hac montes.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service">
-                        <div class="icon-holder">
-                            <img src="img/icons/weight-blue.png" alt="" class="icon">
-                        </div>
-                        <h4 class="heading">Power Training</h4>
-                        <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel
-                            suspendisse scelerisque a aenean hac montes.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="cut cut-bottom"></div>
-    </section>
-    <section id="team" class="section gray-bg">
-        <div class="container">
-            <div class="row title text-center">
-                <h2 class="margin-top">Team</h2>
-                <h4 class="light muted">We're a dream team!</h4>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="team text-center">
-                        <div class="cover" style="background:url('img/team/team-cover1.jpg'); background-size:cover;">
-                            <div class="overlay text-center">
-                                <h3 class="white">$69.00</h3>
-                                <h5 class="light light-white">1 - 5 sessions / month</h5>
+                                    @endforeach
+                                </div>
+{{--                                {!! link_to_route('actions', $type->name, [$type->id]) !!}--}}
+
+                                {{--<a href="#" class="btn btn-white-fill expand">Go Here</a>--}}
+                                <a href="{{ route('category', ['id' => $type->id]) }}">Go Here</a>
                             </div>
                         </div>
-                        <img src="img/team/team3.jpg" alt="Team Image" class="avatar">
-                        <div class="title">
-                            <h4>Ben Adamson</h4>
-                            <h5 class="muted regular">Fitness Instructor</h5>
-                        </div>
-                        <button data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill">Sign Up Now</button>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="team text-center">
-                        <div class="cover" style="background:url('img/team/team-cover2.jpg'); background-size:cover;">
-                            <div class="overlay text-center">
-                                <h3 class="white">$69.00</h3>
-                                <h5 class="light light-white">1 - 5 sessions / month</h5>
-                            </div>
-                        </div>
-                        <img src="img/team/team1.jpg" alt="Team Image" class="avatar">
-                        <div class="title">
-                            <h4>Eva Williams</h4>
-                            <h5 class="muted regular">Personal Trainer</h5>
-                        </div>
-                        <a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill ripple">Sign Up
-                            Now</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="team text-center">
-                        <div class="cover" style="background:url('img/team/team-cover3.jpg'); background-size:cover;">
-                            <div class="overlay text-center">
-                                <h3 class="white">$69.00</h3>
-                                <h5 class="light light-white">1 - 5 sessions / month</h5>
-                            </div>
-                        </div>
-                        <img src="img/team/team2.jpg" alt="Team Image" class="avatar">
-                        <div class="title">
-                            <h4>John Phillips</h4>
-                            <h5 class="muted regular">Personal Trainer</h5>
-                        </div>
-                        <a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill ripple">Sign Up
-                            Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="pricing" class="section">
-        <div class="container">
-            <div class="row title text-center">
-                <h2 class="margin-top white">Pricing</h2>
-                <h4 class="light white">Choose your favorite pricing plan and sign up today!</h4>
-            </div>
-            <div class="row no-margin">
-                <div class="col-md-7 no-padding col-md-offset-5 pricings text-center">
-                    <div class="pricing">
-                        <div class="box-main active" data-img="img/pricing1.jpg">
-                            <h4 class="white">Yoga Pilates</h4>
-                            <h4 class="white regular light">$850.00 <span class="small-font">/ year</span></h4>
-                            <a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-white-fill">Sign Up
-                                Now</a>
-                            <i class="info-icon icon_question"></i>
-                        </div>
-                        <div class="box-second active">
-                            <ul class="white-list text-left">
-                                <li>One Personal Trainer</li>
-                                <li>Big gym space for training</li>
-                                <li>Free tools &amp; props</li>
-                                <li>Free locker</li>
-                                <li>Free before / after shower</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="pricing">
-                        <div class="box-main" data-img="img/pricing2.jpg">
-                            <h4 class="white">Cardio Training</h4>
-                            <h4 class="white regular light">$100.00 <span class="small-font">/ year</span></h4>
-                            <a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-white-fill">Sign Up
-                                Now</a>
-                            <i class="info-icon icon_question"></i>
-                        </div>
-                        <div class="box-second">
-                            <ul class="white-list text-left">
-                                <li>One Personal Trainer</li>
-                                <li>Big gym space for training</li>
-                                <li>Free tools &amp; props</li>
-                                <li>Free locker</li>
-                                <li>Free before / after shower</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+
+                @endforeach
             </div>
         </div>
     </section>
@@ -253,16 +95,8 @@
         </div>
     </section>
 
-
-
-    {{--<div class="main-content">--}}
-    {{--<div class="main-content-inner">--}}
-    {{--<div class="breadcrumbs" id="breadcrumbs">--}}
-
-    {{--</div>--}}
     @yield('content')
-    {{--</div>--}}
-    {{--</div>--}}
+
     @include('partials.footer')
 </div>
 </body>
