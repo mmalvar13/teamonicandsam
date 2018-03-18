@@ -76,3 +76,7 @@ Route::get('/actions/{cat_id}', ['uses' =>'ActionController@get_events'], functi
     return View::make('events');
 });
 
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
