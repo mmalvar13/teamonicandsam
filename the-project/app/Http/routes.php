@@ -108,6 +108,8 @@ Route::post('form-submit', array('before'=>'csrf',function(){
 }));
 
 
-Route::get('makeaction', 'ActionController@create')->name('makeaction.create');
-Route::post('makeaction', 'ActionController@store')->name('makeaction.store');
+//Route::get('makeaction', 'ActionController@create')->name('makeaction.create');
+Route::post('form', 'ActionController@store')->name('form.store');
+
+
 

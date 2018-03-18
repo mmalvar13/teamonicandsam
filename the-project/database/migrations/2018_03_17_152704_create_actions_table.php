@@ -27,6 +27,8 @@ class CreateActionsTable extends Migration
             $table->foreign('category_id')->references('id')->on('categories');
             $table->foreign('type_id')->references('id')->on('types');
             $table->foreign('organization_id')->references('id')->on('organizations');
+            $table->timestamps();
+
         });
     }
 
