@@ -49,18 +49,18 @@
                         <div class="intro-table intro-table-1 intro-table-hover">
                             <h5 class="white heading">{{$type->name}}</h5>
                             <div class="bottom">
-                                <h4 class="white heading small-heading no-margin regular">Register Today</h4>
-                                <h4 class="white heading small-pt">20% Discount</h4>
-                                <div class="appear-on-hover">
-                                    @foreach($categories as $category)
-                                        <div><button type="button" class="btn btn-info">{{$category->name}}</button></div>
 
-                                    @endforeach
-                                </div>
+
 {{--                                {!! link_to_route('actions', $type->name, [$type->id]) !!}--}}
 
                                 {{--<a href="#" class="btn btn-white-fill expand">Go Here</a>--}}
-                                <a href="{{ route('category', ['id' => $type->id]) }}">Go Here</a>
+                                {{--<a href="{{ route('category', ['id' => $type->id]) }}" class="white heading small-heading">Go Here</a>--}}
+                            </div>
+                            <div class="appear-on-hover">
+                                @foreach($categories as $category)
+                                    <div class="button-wrap"><button type="button" class="btn btn-info">{{$category->name}}</button></div>
+
+                                @endforeach
                             </div>
                         </div>
                     </div>

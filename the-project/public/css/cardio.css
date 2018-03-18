@@ -339,6 +339,7 @@ section {
 .intro-table-hover:hover {
 	background-image: url('../img/table-2-hover.jpg');
 	background-position: 50% 50%;
+
 }
 
 .intro-table-third {
@@ -386,7 +387,9 @@ section {
 
 .intro-tables .intro-table .heading {
 	margin: 0;
-	padding: 30px;
+	padding: 12px;
+	text-align: center;
+	font-size: 20px;
 }
 
 .intro-tables .intro-table .small-heading {
@@ -1115,4 +1118,46 @@ footer .social-footer li:hover a {
 
 .btn-info{
 	background-color: #31b0d5;
+	padding: 10px 30px;
+}
+
+.appear-on-hover .button-wrap{
+	width: 90%;
+	margin: 10px auto;
+}
+
+.appear-on-hover .button-wrap .btn-info{
+	width: 100%;
+}
+
+.appear-on-hover{
+	display: none;
+}
+
+.intro-table:hover > .appear-on-hover{
+	display: block;
+}
+
+.intro-table-hover{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.intro-table-hover .heading{
+	font-size: 45px;
+}
+
+.intro-tables .intro-table .heading{
+	font-size: 40px;
+}
+
+.intro-table:hover{
+	display: block;
+}
+.intro-table:hover > .heading {
+	margin: 0;
+	padding: 12px;
+	text-align: center;
+	font-size: 20px;
 }
