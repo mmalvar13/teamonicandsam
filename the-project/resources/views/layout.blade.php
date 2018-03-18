@@ -20,17 +20,29 @@
     <meta name="msapplication-config" content="img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <!-- Normalize -->
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    {{--<link rel="stylesheet" type="text/css" href="css/normalize.css">--}}
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/normalize.css') }}">
+
     <!-- Bootstrap -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    {{--<link rel="stylesheet" type="text/css" href="css/bootstrap.css">--}}
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/bootstrap.css') }}">
+
     <!-- Owl -->
-    <link rel="stylesheet" type="text/css" href="css/owl.css">
+    {{--<link rel="stylesheet" type="text/css" href="css/owl.css">--}}
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/owl.css') }}">
+
     <!-- Animate.css -->
-    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    {{--<link rel="stylesheet" type="text/css" href="css/animate.css">--}}
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/animate.css') }}">
+
     <!-- Font Awesome -->
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.1.0/css/font-awesome.min.css">
+    {{--<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.1.0/css/font-awesome.min.css">--}}
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('fonts/font-awesome-4.1.0/css/font-awesome.min.css') }}">
+
     <!-- Elegant Icons -->
-    <link rel="stylesheet" type="text/css" href="fonts/eleganticons/et-icons.css">
+    {{--<link rel="stylesheet" type="text/css" href="fonts/eleganticons/et-icons.css">--}}
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('fonts/eleganticons/et-icons.css') }}">
+
     <!-- Main style -->
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/cardio.css') }}">
 
@@ -42,7 +54,35 @@
             crossorigin="anonymous"></script>
 
 </head>
+
 <body class="layout-default">
+<nav class="navbar">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            {{--<a class="navbar-brand" href="#"><img src="img/logo.png" data-active-url="img/logo-active.png" alt=""></a>--}}
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right main-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="#services">See All Actions</a></li>
+                <li><a href="#services">Browse Organizations</a></li>
+                <li><a href="#team"></a></li>
+                <li><a href="{{ url('/register') }}" class="btn btn-blue">Sign Up</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
 @yield('content')
 </body>
 </html>

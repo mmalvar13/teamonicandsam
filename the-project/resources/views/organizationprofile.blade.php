@@ -1,6 +1,5 @@
 
 @extends('layout')
-
 @section('content')
     <section class="actions-purple-section">
         <div class="container">

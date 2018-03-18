@@ -1208,3 +1208,11 @@ footer .social-footer li:hover a {
 	background-color: rgba(28, 36, 65, 0.93);
 	padding: 7% 20%;
 }
+
+.layout-default .navbar{
+	top: 10px;
+}
+
+.layout-default .main-nav{
+	flex-direction: row;
+}

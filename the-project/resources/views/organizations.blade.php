@@ -4,13 +4,25 @@
 
 @section('content')
     <section class="actions-purple-section">
-        <div class="container">
-            @foreach($organizations as $organization)
-                <h1 class="header-text white">{{ $organization->name }}</h1>
-                <br>
-                <br>
-                <p>{{ route ('get_your_actions', ['id' => $organization->id])}}</p>
-    @endforeach
+        @foreach($organizations as $organization)
+
+
+        <div class="col-md-6">
+            <a href="{{'/organizations/' . $organization->id}}" class="btn-links-to-actions">
+                <div class="service">
+                    <div class="icon-holder">
+                        <img src="img/icons/calendar-alt.svg" alt="" class="icon">
+                    </div>
+                    <h4 class="heading">{{$organization->name}}</h4>
+                    <p class="description">Community led events for open participation</p>
+                </div>
+            </a>
+        </div>
+        @endforeach
+
+
+
+
         </div>
     </section>
 @stop
