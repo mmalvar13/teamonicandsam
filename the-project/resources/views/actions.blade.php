@@ -8,10 +8,10 @@
         <br>
         @foreach($actions as $action)
             <div class="row gray-bg actions">
-                <div class="col-sm-12 col-lg-2">
-                    <h4 class="actions-date">{{ $action->date }}</h4>
+                <div class="col-sm-12 col-lg-4">
+                    <h5 class="actions-date">{{ $action->date }}</h5>
                 </div>
-                <div class="col-sm-12 col-lg-10">
+                <div class="col-sm-12 col-lg-8">
                     <h3>{{ $action->title }}</h3>
                     <p>{{ $action->description }}</p>
                     <a href="{{ $action->website }}">
