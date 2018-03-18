@@ -77,5 +77,14 @@ Route::get('users', function()
     return 'Users!';
 });
 
+Route::get('resources', function()
+{
+    return View::make('resources');
+});
+
+
 
 Route::get('/actions/{cat_id}/{type_id}', ['uses' =>'ActionController@get_actions_by_type']);
+
+Route::get('/actions/{cat_id}', ['uses' =>'ActionController@get_events']);
+

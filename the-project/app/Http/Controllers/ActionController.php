@@ -15,4 +15,14 @@ class ActionController extends Controller
 
 
     }
+
+
+    public function get_events($cat_id)
+    {
+
+        $actions = Action::where("category_id", $cat_id)->get();
+        return \View::make('events')->with('actions', $actions);
+
+
+    }
 }

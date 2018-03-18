@@ -456,6 +456,11 @@ section {
 	margin: 40px 0;
 }
 
+#services{
+	background-color: #4E9651;
+
+}
+
 .service {
 	width: 100%;
 	height: 320px;
@@ -1026,7 +1031,12 @@ footer .social-footer li:hover a {
 }
 
 .muted {
-	color: #989da0;
+	/*color: #989da0;*/
+	color: white;
+}
+
+#services p{
+	color: white;
 }
 
 .margin-top {

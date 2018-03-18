@@ -51,14 +51,20 @@
                             <div class="bottom">
 
 
-{{--                                {!! link_to_route('actions', $type->name, [$type->id]) !!}--}}
+                                {{--                                {!! link_to_route('actions', $type->name, [$type->id]) !!}--}}
 
                                 {{--<a href="#" class="btn btn-white-fill expand">Go Here</a>--}}
-                                {{--<a href="{{ route('category', ['id' => $type->id]) }}" class="white heading small-heading">Go Here</a>--}}
                             </div>
                             <div class="appear-on-hover">
                                 @foreach($categories as $category)
-                                    <div class="button-wrap"><button type="button" class="btn btn-info">{{$category->name}}</button></div>
+                                    @if($category->name != "Event")
+                                        <a href="{{'/actions/' . $category->id . '/' . $type->id}}"
+                                           class="btn-links-to-actions">
+                                            <div class="button-wrap">
+                                                <button type="button" class="btn btn-info">{{$category->name}}</button>
+                                            </div>
+                                        </a>
+                                    @endif
 
                                 @endforeach
                             </div>
@@ -68,6 +74,42 @@
                 @endforeach
             </div>
         </div>
+    </section>
+    <section id="services" class="section section-padded">
+        <div class="container">
+            <div class="row text-center title">
+                <h2>Need Help Now?</h2>
+                <h4 class="light muted">beep beep beep</h4>
+            </div>
+            <div class="row services">
+
+                @foreach($categories as $category)
+                    @if($category->name == "Event")
+                        <div class="col-md-4">
+                            <a href="{{'/actions/' . $category->id}}" class="btn-links-to-actions">
+                                <div class="service">
+                                    <div class="icon-holder">
+                                        <img src="img/icons/heart-blue.png" alt="" class="icon">
+                                    </div>
+                                    <h4 class="heading">{{$category->name}}</h4>
+                                    <p class="description">Community led events for open participation</p>
+                                </div>
+                            </a>
+                        </div>
+                    @endif
+                @endforeach
+                <div class="col-md-4">
+                    <div class="service">
+                        <div class="icon-holder">
+                            <img src="img/icons/heart-blue.png" alt="" class="icon">
+                        </div>
+                        <h4 class="heading">Need Help Paying the Bills?</h4>
+                        <p class="description">Click here to see a list of resources available to those in need.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cut cut-bottom"></div>
     </section>
     <section class="section section-padded blue-bg">
         <div class="container">
