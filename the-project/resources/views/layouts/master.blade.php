@@ -114,7 +114,7 @@
         <div class="container">
             <div class="row text-center title">
                 <h2>Need Help Now?</h2>
-                <h4 class="light muted">beep beep beep</h4>
+                <h4 class="light muted">Come to a community event or read through our list of resources</h4>
             </div>
             <div class="row services">
 
