@@ -1242,3 +1242,11 @@ footer .social-footer li:hover a {
 .layout-default .main-nav{
 	flex-direction: row;
 }
+
+.section-padded.blue-bg{
+	padding: 100px 40px;
+}
+
+.section-padded.blue-bg h2{
+	color: white;
+}

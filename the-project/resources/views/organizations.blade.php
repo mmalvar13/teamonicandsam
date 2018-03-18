@@ -14,15 +14,10 @@
                         <img src="img/icons/calendar-alt.svg" alt="" class="icon">
                     </div>
                     <h4 class="heading">{{$organization->name}}</h4>
-                    <p class="description">Community led events for open participation</p>
+                    <p class="description">{{$organization->description}}</p>
                 </div>
             </a>
         </div>
         @endforeach
-
-
-
-
-        </div>
     </section>
 @stop

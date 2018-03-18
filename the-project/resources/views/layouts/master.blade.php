@@ -74,10 +74,24 @@
                     </div>
                 @endforeach
             </div>
-            <h2>About Us</h2>
-            <br>
-                <h4>There are a multitude of factors that cause families and individuals to live below the poverty line in our community. Homelessness, addiction, incarceration, food scarcity, barriers to education, and unjust laws and policies just to name a few.</h4>
-                <h4>Instead of trying tackle the entire problem at once, ______ allows civic-minded individuals to take daily, weekly, and monthly action on the urgent issues that matter most to their community.</h4>
+
+
+        </div>
+    </section>
+    <section class="section section-padded blue-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                        <h2>About Us</h2>
+                        <br>
+                        <h4>There are a multitude of factors that cause families and individuals to live below the
+                            poverty line in our community. Homelessness, addiction, incarceration, food scarcity,
+                            barriers to education, and unjust laws and policies just to name a few.</h4>
+                        <h4>Instead of trying tackle the entire problem at once, ______ allows civic-minded individuals
+                            to take daily, weekly, and monthly action on the urgent issues that matter most to their
+                            community.</h4>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -120,14 +134,15 @@
                     @endif
                 @endforeach
                 <div class="col-md-6">
-                    <a href="{{'/resources'}}" >
-                    <div class="service">
-                        <div class="icon-holder">
-                            <img src="img/icons/money-bill-alt.svg" alt="" class="icon">
+                    <a href="{{'/resources'}}">
+                        <div class="service">
+                            <div class="icon-holder">
+                                <img src="img/icons/money-bill-alt.svg" alt="" class="icon">
+                            </div>
+                            <h4 class="heading">Need Help Paying the Bills?</h4>
+                            <p class="description">Click here to see a list of resources available to those in need.</p>
                         </div>
-                        <h4 class="heading">Need Help Paying the Bills?</h4>
-                        <p class="description">Click here to see a list of resources available to those in need.</p>
-                    </div></a>
+                    </a>
                 </div>
             </div>
         </div>
