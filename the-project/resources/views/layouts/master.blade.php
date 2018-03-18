@@ -45,9 +45,11 @@
         <div class="cut cut-top"></div>
         <div class="container">
             <div class="row intro-tables">
+                @php $count=0;@endphp
                 @foreach($types as $type)
+                    @php$count++;@endphp
                     <div class="col-md-4">
-                        <div class="intro-table intro-table-1 intro-table-hover">
+                        <div class="intro-table intro-table-1 intro-table-hover custom-image-@php echo $count @endphp">
                             <h5 class="white heading">{{$type->name}}</h5>
                             <div class="bottom">
 

@@ -114,7 +114,7 @@ header {
 	width: 100%;
 	color: white;
 	background: rgba(28, 36, 65, 0.93);
-	background: url('../img/header.jpg');
+	background: url('../img/fight_poverty.png');
 	background-size: cover;
 }
 
@@ -348,7 +348,30 @@ section {
 .intro-table-hover {
 	-webkit-transition: background-image 0.3s ease, background-position 0.3s;
 	transition: background-image 0.3s ease, background-position 0.3s;
-	background-image: url('../img/table-2.jpg');
+}
+
+.custom-image-1 {
+background-image: url('../img/policy.png');
+}
+
+.custom-image-1:hover {
+	background-image: url('../img/policy_hover.png');
+}
+
+.custom-image-2 {
+	background-image: url('../img/volunteer.png');
+}
+
+.custom-image-2:hover {
+	background-image: url('../img/volunteer_hover.png');
+}
+
+.custom-image-3 {
+	background-image: url('../img/donate.png');
+}
+
+.custom-image-3:hover {
+	background-image: url('../img/dontate_hover.png');
 }
 
 .intro-table-hover h4 {
@@ -359,7 +382,6 @@ section {
 }
 
 .intro-table-hover:hover {
-	background-image: url('../img/table-2-hover.jpg');
 	background-position: 50% 50%;
 
 }
