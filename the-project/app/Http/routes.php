@@ -87,6 +87,9 @@ Route::get('/actions/{cat_id}', ['uses' =>'ActionController@get_events'], functi
     return View::make('events');
 });
 
+Route::get('/organizations/{org_id}', ['uses' =>'ActionController@get_actions_by_org']);
+
+
 
 Route::auth();
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Action;
+use App\Organization;
 
 
 class ActionController extends Controller
@@ -25,6 +26,16 @@ class ActionController extends Controller
 
 
     }
+
+
+
+    public function get_actions_by_org($org_id){
+        $actions = Action::where('organization_id', $org_id)->get();
+        $organization = Organization::where('id', $org_id)->first();
+
+        return \View::make('organizationprofile')->with('actions', $actions)->with('organization', $organization);
+    }
+
 
     public function create()
     {

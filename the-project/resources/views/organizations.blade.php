@@ -11,4 +11,6 @@
                 <br>
                 <p>{{ route ('get_your_actions', ['id' => $organization->id])}}</p>
     @endforeach
+        </div>
+    </section>
 @stop
