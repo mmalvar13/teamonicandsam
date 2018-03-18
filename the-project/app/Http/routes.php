@@ -36,6 +36,7 @@ Route::post('login', array('uses' => 'HomeController@doLogin'));
 Route::get('organizations', function()
 {
 
+//	$organizations = \App\Organization::all();
 	$organizations = \App\Organization::find(1);
 
 	return View::make('organizations')->with('organizations', $organizations);

@@ -90,7 +90,7 @@
                             <a href="{{'/actions/' . $category->id}}" class="btn-links-to-actions">
                                 <div class="service">
                                     <div class="icon-holder">
-                                        <img src="img/icons/heart-blue.png" alt="" class="icon">
+                                        <img src="img/icons/calendar-alt.svg" alt="" class="icon">
                                     </div>
                                     <h4 class="heading">{{$category->name}}</h4>
                                     <p class="description">Community led events for open participation</p>
@@ -103,7 +103,7 @@
                     <a href="{{'/resources'}}" >
                     <div class="service">
                         <div class="icon-holder">
-                            <img src="img/icons/heart-blue.png" alt="" class="icon">
+                            <img src="img/icons/money-bill-alt.svg" alt="" class="icon">
                         </div>
                         <h4 class="heading">Need Help Paying the Bills?</h4>
                         <p class="description">Click here to see a list of resources available to those in need.</p>
