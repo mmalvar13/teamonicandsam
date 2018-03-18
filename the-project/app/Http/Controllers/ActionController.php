@@ -25,4 +25,39 @@ class ActionController extends Controller
 
 
     }
+
+    public function create()
+    {
+        return view('form');
+    }
+
+    public function store(Request $request)
+    {
+
+        $makeaction = [];
+
+        $makeaction['date'] = $request->get('date');
+        $makeaction['title'] = $request->get('title');
+        $makeaction['description'] = $request->get('description');
+        $makeaction['how_to_help'] = $request->get('how_to_help');
+        $makeaction['phone_number'] = $request->get('phone_number');
+        $makeaction['website'] = $request->get('website');
+        $makeaction['category_id'] = $request->get('category_id');
+        $makeaction['organization_id'] = $request->get('organization_id');
+        $makeaction['type_id'] = $request->get('type_id');
+
+
+        // Mail delivery logic goes here
+
+//        flash('Your message has been sent!')->success();
+
+        return redirect()->route('makeaction.create');
+
+
+
+    }
+
+
+
+
 }

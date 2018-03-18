@@ -94,3 +94,17 @@ Route::get('/home', 'HomeController@index');
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+
+Route::get('form', function(){
+    //render app/views/form.blade.php
+    return View::make('form');
+});
+Route::post('form-submit', array('before'=>'csrf',function(){
+    //form validation come here
+}));
+
+
+Route::get('makeaction', 'ActionController@create')->name('makeaction.create');
+Route::post('makeaction', 'ActionController@store')->name('makeaction.store');
+
