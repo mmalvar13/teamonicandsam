@@ -201,6 +201,10 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 
 }
 
+.layout-default .purple-section input[type="submit"]{
+	color: black;
+}
+
 
 
 
