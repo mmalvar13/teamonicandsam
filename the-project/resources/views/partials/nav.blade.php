@@ -15,9 +15,9 @@
             <ul class="nav navbar-nav navbar-right main-nav">
                 <li><a href="#intro">Home</a></li>
                 <li><a href="#services">See All Actions</a></li>
+                <li><a href="#services">Browse Organizations</a></li>
                 <li><a href="#team"></a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Sign Up</a></li>
+                <li><a href="{{ url('/register') }}" class="btn btn-blue" >Sign Up</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->

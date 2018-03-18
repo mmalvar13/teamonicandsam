@@ -15,7 +15,7 @@ return [
 
     'defaults' => [
         'guard' => 'web',
-        'passwords' => 'users',
+        'passwords' => 'organizations',
     ],
 
     /*
@@ -28,7 +28,7 @@ return [
     | here which uses session storage and the Eloquent user provider.
     |
     | All authentication drivers have a user provider. This defines how the
-    | users are actually retrieved out of your database or other storage
+    | organizations are actually retrieved out of your database or other storage
     | mechanisms used by this application to persist your user's data.
     |
     | Supported: "session", "token"
@@ -38,12 +38,12 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'organizations',
         ],
 
         'api' => [
             'driver' => 'token',
-            'provider' => 'users',
+            'provider' => 'organizations',
         ],
     ],
 
@@ -53,7 +53,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | All authentication drivers have a user provider. This defines how the
-    | users are actually retrieved out of your database or other storage
+    | organizations are actually retrieved out of your database or other storage
     | mechanisms used by this application to persist your user's data.
     |
     | If you have multiple user tables or models you may configure multiple
@@ -65,14 +65,14 @@ return [
     */
 
     'providers' => [
-        'users' => [
+        'organizations' => [
             'driver' => 'eloquent',
-            'model' => App\User::class,
+            'model' => App\Organization::class,
         ],
 
-        // 'users' => [
+        // 'organizations' => [
         //     'driver' => 'database',
-        //     'table' => 'users',
+        //     'table' => 'organizations',
         // ],
     ],
 
@@ -96,8 +96,8 @@ return [
     */
 
     'passwords' => [
-        'users' => [
-            'provider' => 'users',
+        'organizations' => [
+            'provider' => 'organizations',
             'email' => 'auth.emails.password',
             'table' => 'password_resets',
             'expire' => 60,

@@ -23,6 +23,16 @@ Route::get('/', function () {
     return view('layouts.master')->with('types', $types)->with('categories', $categories);
 });
 
+
+
+// route to show the login form
+Route::get('login', array('uses' => 'HomeController@showLogin'));
+
+// route to process the form
+Route::post('login', array('uses' => 'HomeController@doLogin'));
+
+
+
 Route::get('organizations', function()
 {
 
@@ -76,6 +86,10 @@ Route::get('/actions/{cat_id}', ['uses' =>'ActionController@get_events'], functi
     return View::make('events');
 });
 
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
 
 Route::auth();
 
