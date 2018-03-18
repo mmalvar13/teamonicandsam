@@ -31,5 +31,11 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Health',
             ]
         );
+
+        DB::table('categories')->insert(
+            [
+                'name' => 'Event',
+            ]
+        );
     }
 }

@@ -11,7 +11,7 @@ class ActionController extends Controller
     public function get_actions_by_type($cat_id, $type_id)
     {
 
-        $actions = Action::where("type_id", $type_id)->where("category_id", $cat_id)->get();
+        $actions = Action::where("type_id", $type_id)->where("category_id", $cat_id)->orderBy('date', 'desc')->get();
         return \View::make('actions')->with('actions', $actions);
 
 
@@ -21,7 +21,7 @@ class ActionController extends Controller
     public function get_events($cat_id)
     {
 
-        $actions = Action::where("category_id", $cat_id)->get();
+        $actions = Action::where("category_id", $cat_id)->orderBy('date', 'desc')->get();
         return \View::make('events')->with('actions', $actions);
 
 
@@ -30,7 +30,7 @@ class ActionController extends Controller
 
 
     public function get_actions_by_org($org_id){
-        $actions = Action::where('organization_id', $org_id)->get();
+        $actions = Action::where('organization_id', $org_id)->orderBy('date', 'desc')->get();
         $organization = Organization::where('id', $org_id)->first();
 
         return \View::make('organizationprofile')->with('actions', $actions)->with('organization', $organization);
