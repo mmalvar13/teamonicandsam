@@ -37,6 +37,7 @@
 
 </head>
 <body class="no-skin">
+@include('partials.nav');
 @include('partials.header')
 <div class="main-container" id="main-container">
     {{--@include('partials.sidebar')--}}
@@ -85,7 +86,7 @@
 
                 @foreach($categories as $category)
                     @if($category->name == "Event")
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <a href="{{'/actions/' . $category->id}}" class="btn-links-to-actions">
                                 <div class="service">
                                     <div class="icon-holder">
@@ -98,14 +99,15 @@
                         </div>
                     @endif
                 @endforeach
-                <div class="col-md-4">
+                <div class="col-md-6">
+                    <a href="{{'/resources'}}" >
                     <div class="service">
                         <div class="icon-holder">
                             <img src="img/icons/heart-blue.png" alt="" class="icon">
                         </div>
                         <h4 class="heading">Need Help Paying the Bills?</h4>
                         <p class="description">Click here to see a list of resources available to those in need.</p>
-                    </div>
+                    </div></a>
                 </div>
             </div>
         </div>

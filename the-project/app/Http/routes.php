@@ -25,21 +25,11 @@ Route::get('/', function () {
 
 Route::get('organizations', function()
 {
-//	$organizations = \App\Organization::all();
-//
-//	return View::make('organizations')->with('organizations', $organizations);
 
 	$organizations = \App\Organization::find(1);
 
 	return View::make('organizations')->with('organizations', $organizations);
 });
-
-//Route::get('categories', function()
-//{
-//    $categories = \App\Category::all();
-//
-//    return View::make('categories')->with('categories', $categories);
-//});
 
 
 Route::get('categories/{id}', function($id)
@@ -51,19 +41,14 @@ Route::get('categories/{id}', function($id)
 
 
 
-//Route::get('actions', function()
-//{
-//    $actions = \App\Action::all();
-//
-//    return View::make('actions')->with('actions', $actions);
-//});
-
 Route::get('actions', function()
 {
     $actions = \App\Action::all();
 
     return View::make('actions')->with('actions', $actions);
 })->name('get_your_actions');
+
+
 
 Route::get('types', function()
 {
@@ -84,7 +69,10 @@ Route::get('resources', function()
 
 
 
+
 Route::get('/actions/{cat_id}/{type_id}', ['uses' =>'ActionController@get_actions_by_type']);
 
-Route::get('/actions/{cat_id}', ['uses' =>'ActionController@get_events']);
+Route::get('/actions/{cat_id}', ['uses' =>'ActionController@get_events'], function($cat_id){
+    return View::make('events');
+});
 
